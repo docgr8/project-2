@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Registration Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="menu-btn" onclick="toggleMenu()">&#9776;</div>
+
+  <div id="menu">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="REGISTER.HTML">Register</a></li>
+          <li><a href="login11.html">Login</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="COLLEGE LIST.HTML">Colleges List</a></li>
+          <li><a href="#">News/Conferences</a></li>
+          <li><a href="#">LinkedEnt</a></li>
+          <li><a href="#">Confessions</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+      </ul>
+  </div>
+
+  <div id="header">
+      <div id="logo">AFFORDIT.SITE</div>
+  </div>
+  <style>
+   body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive;
+    color: #fff; /* Text color set to white */
+}
+
+
+#header {
+        text-align: center;
+        background-color: #b200de; /* Darker background for header */
+        padding: 20px;
+    }
+ #menu-btn {
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        color: #000000;
+        font-size: 20px;
+        z-index: 1000;
+    }   #menu {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #060606;
+        padding-top: 50px;
+        z-index: 1000;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+    
+    #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #menu li {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    #menu a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+    }
+    
+    #menu a:hover {
+        color: #ffcc00;
+    }body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Add scrollbar */
+    max-height: 80vh; /* Set maximum height to enable scrolling */
+    transition: max-height 0.5s ease-in-out; /* Add transition effect */
+  }
+  
+  .animated-form {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out; /* Add transition effect */
+  }
+  
+  .input-group:hover {
+    transform: scale(1.02); /* Add hover effect */
+  }
+  
+  input,
+  select,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Add transition effect */
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .captcha-container {
+    /* Style your captcha container here */
+  }
+  
+  /* Custom scrollbar styles */
+  .container::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 8px;
+  }
+  
+  .container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  .container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }</style>
+  <script>function signInWithGoogle() {
+    // Add your Google sign-in logic here
+    console.log('Signing up with Google');
+  }
+  
+  function signInWithMicrosoft() {
+    // Add your Microsoft sign-in logic here
+    console.log('Signing up with Microsoft');
+  }
+  
+  document.getElementById('registrationForm').addEventListener('submit', function (event) {
+    // Add your form submission logic here
+    event.preventDefault();
+    console.log('Form submitted');
+  });
+  </script>
+  <div class="container">
+    <form id="registrationForm" class="animated-form">
+      <h2>Sign Up</h2>
+      <div class="input-group">
+        <input type="text" id="fullName" placeholder="Full Name" required>
+      </div>
+      <div class="input-group">
+        <input type="email" id="email" placeholder="Email Address" required>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Password" required>
+      </div>
+      <div class="input-group">
+        <input type="text" id="username" placeholder="Username" required>
+      </div>
+      <div class="input-group">
+        <input type="date" id="dob" placeholder="Date of Birth" required>
+      </div>
+      <div class="input-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <input type="file" id="profilePicture" accept="image/*" required>
+      </div>
+      <div class="input-group">
+        <button type="button" onclick="signInWithGoogle()">Sign Up with Google</button>
+        <button type="button" onclick="signInWithMicrosoft()">Sign Up with Microsoft</button>
+      </div>
+      <div class="input-group">
+        <input type="checkbox" id="terms" required>
+        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+      </div>
+      <div class="input-group">
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+      </div>
+      <div class="input-group">
+        <input type="text" id="country" placeholder="Country/Location" required>
+      </div>
+      <div class="input-group">
+        <label for="language">Language Preference:</label>
+        <select id="language" required>
+          <option value="english">English</option>
+          <option value="spanish">hindi</option>
+          <option value="french">tamil</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <div class="captcha-container">
+          <!-- Your captcha implementation goes here -->
+        </div>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
